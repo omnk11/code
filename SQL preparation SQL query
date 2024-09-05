@@ -1,0 +1,75 @@
+what information we needed and from where we will get the data whenever we are fetching the data.
+
+query is fetch the third highest salary from Employee table.
+
+Select TOP 1 salary from (select top 3  EmployeeInfor
+
+select salary from Employeeinfo order by salary DESC LIMIT (2,1); 
+
+//here limit is taking offset and number of row which we need to fetch. 
+2 means after 2 and 1 means after 2 we need to fetch 1 row 
+
+QUESTION 2 : fetch the duplicate row
+
+select *, count(empid) from Employee Group by emipid having empid>1;
+
+question 3: fetch even and ODD records.
+//here we will us the MOD function which takes divident and divisor (empid, 2) 
+select * from emplyee where MOD(empid,2)=0;//Even 
+select * from employee where MOD(empid,2)=1//odd
+
+SUBQUERY: query inside query 
+
+//find first and last value from the table 
+
+select * from employee where empid=(select max(empid) from employee)
+
+//coppy from one table to another 
+
+
+Insert into ABC select * from  from cbc;
+
+INSERT INTO target_table
+SELECT *
+FROM source_table
+WHERE condition;
+
+question: write a query to fetch the employee working in same department
+
+here we are spliting our table into 2 table by giving the alias E and E1 
+
+Select Distinct  E.empid,E.Employeename, E.DepartmentName from Employee E join Employee E1 on e.department=e1.departmentid where e.empid!=e1.empid;
+
+// Delete duplicate record from table 
+here will use the self join 
+
+DELETE E1 from Employee E1 join EMployee E2 on e1.empemail=e2.email Where e1.empid>e2.empid;
+
+
+//when we are working with date --> sql understood YYMMDD format 
+
+so in this case we will use STR_TO_DATE('01-02-2023','%D,%M,%Y); it will convert in YMD format.
+
+fetch the employee where date of joining is between some date.
+
+NOT IN Operator:
+
+select the records where employee is not from HR or developement
+
+slect * from employee where Department Not in ('HR', 'Developement');
+
+
+// two minimum salries from the table 
+
+SELECT name, salary
+FROM employees
+ORDER BY salary ASC
+LIMIT 2;
+
+question: create table from another table using same schema or structure.
+Create tabel ABC  as (select * from Employee where 1=2);
+
+//insert
+Insert into ABC select * from Employees;
+
+
