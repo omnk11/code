@@ -1,0 +1,55 @@
+//Learning and Revising DOT net concepts :
+
+below site is improtant and have listed all the imprtant questions which covers the DOT net conecepts.
+
+https://interviewzilla.com/net/net-interview-questions-for-experienced/
+
+
+
+
+Definitions
+String: In C#, a string is an immutable sequence of characters. This means once a string object is created, it cannot be changed. Any modification to a string results in the creation of a new string object.
+StringBuilder: The StringBuilder class in C# is used to represent a mutable string of characters. Unlike string, StringBuilder allows you to modify the string without creating a new object, making it more efficient for scenarios where you need to perform multiple modifications to a string.
+Examples
+String Example
+C#
+
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        string str = "Hello";
+        str += " World"; // This creates a new string object
+        Console.WriteLine(str); // Output: Hello World
+    }
+}
+AI-generated code. Review and use carefully. More info on FAQ.
+In this example, the += operator creates a new string object each time it is used, which can be inefficient if done repeatedly.
+
+StringBuilder Example
+C#
+
+using System;
+using System.Text;
+
+class Program
+{
+    static void Main()
+    {
+        StringBuilder sb = new StringBuilder("Hello");
+        sb.Append(" World"); // This modifies the existing StringBuilder object
+        Console.WriteLine(sb.ToString()); // Output: Hello World
+    }
+}
+In this example, the Append method modifies the existing StringBuilder object, making it more efficient for multiple modifications.
+
+When to Use Which
+Use string when the value is not expected to change frequently.
+Use StringBuilder when you need to perform multiple modifications to a string, such as in loops or complex string manipulations.
+
+
+//String and String Builder Methods in the C# click on below link
+https://www.bing.com/chat?q=string+and+stringbuilder+methods+in+c%23&sendquery=1&FORM=SCCODX
+
