@@ -10,6 +10,8 @@ SharedAccessKey=
 
 iQ+odmisIgrAm/ZHtJq2JI0L4yFLeapE++ASbHHv/eM=hhsajhsj
 
+Endpoint=sb://myservicebustest111.servicebus.windows.net/;SharedAccessKeyName=RootManageSharedAccessKey;SharedAccessKey=iQ+odmisIgrAm/ZHtJq2JI0L4yFLeapE++ASbHHv/eM=999
+
 https://www.questpond.com/interview-questions---answers-series-for-c-net-fresher---experienced/cid88
 
 
