@@ -1,7 +1,8 @@
-Endpoint=sb://myservicebustest111.servicebus.windows.net/;SharedAccessKeyName=mystring;SharedAccessKey=tl/unZo3/rbPyV9U9AKaOD06Gig/JqZFG+ASbG5u4XQ=9
 
 
-Endpoint=sb://myservicebustest111.servicebus.windows.net/;
+
+Endpoint=sb://myservicebustest111.servicebus.windows.net/;tl/unZo3/rbPyV9U9AKaOD06Gig/JqZFG+ASbG5u4XQ=0009
+
 
 
 
